@@ -6,15 +6,8 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:14:55 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/20 16:20:46 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/22 16:13:55 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
-
-int	sigusr1(int quest)
-{
-	if (quest)
-		return (quest);
-	return (0);
-}
+#include "client.h"
