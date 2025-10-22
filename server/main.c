@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/22 18:08:34 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/22 20:00:35 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	process_signal(int signum)
 		ft_printf("Received SIGUSR2 signal: %d\n", signum);
 	else
 		ft_printf("Received unknown signal (SIGUSR1 SIGUSR2): %d\n", signum);
+	ft_printf("Message Received\n");
 }
 
 void	process_sigint(int signum)
