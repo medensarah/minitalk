@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:01:41 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/22 17:08:51 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/22 18:04:15 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,9 @@
 # include <unistd.h>
 
 # include "../ft_printf/ft_printf.h"
+
+void	setup_signals();
+void	process_signal(int signum);
+void	process_sigint(int signum);
 
 #endif
