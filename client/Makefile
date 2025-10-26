@@ -6,7 +6,7 @@ OBJDIR = objects
 PRINTF_DIR = ../ft_printf
 PRINTF = $(PRINTF_DIR)/printf.a
 
-SRCS = main.c signal.c
+SRCS = main.c signal.c utils.c
 OBJS = $(SRCS:.c=.o)
 OBJS := $(addprefix $(OBJDIR)/, $(OBJS))
 

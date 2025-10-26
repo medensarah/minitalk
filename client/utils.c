@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 15:39:25 by smedenec         ###   ########.fr       */
+/*   Created: 2025/10/26 15:04:09 by smedenec          #+#    #+#             */
+/*   Updated: 2025/10/26 15:44:56 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../config.h"
 #include "client.h"
-#include <time.h>
 
-int	main(int argc, char **argv)
+int	ft_atoi(const char *str)
 {
+	int	num;
 	int	i;
-	int	pid;
-	int	signum;
 
-	pid = 0;
+	num = 0;
 	i = 0;
-	signum = 0;
-	ft_printf("Client\n");
-	if ((argc == 3) && argv && argv[1] && argv[2])
+	while (str && (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str && str[i])
 	{
-		ft_printf("ohh");
-		pid = ft_atoi(argv[1]);
-		if (!pid)
-			return (1);
-		ft_printf("PID = %d\nSTR = %s\n", pid, argv[2]);
-		while (argv[2][i])
-			send_char(pid, argv[2][i++]);
-		send_char(pid, '\0');
-		return (0);
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (0);
+		i++;
 	}
-	else
-		return (1);
+	i = 0;
+	while (str && (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str && (str[i] >= '0' && str[i] <= '9'))
+	{
+		if (num > 99999999)
+			return (0);
+		num = 10 * num;
+		num = num + (str[i] - 48);
+		i++;
+	}
+	return (num);
 }

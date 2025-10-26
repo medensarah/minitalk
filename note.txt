@@ -1,3 +1,4 @@
 USLEEP ?
 ENLEVER <time.h> et nanosleep()
 Pourquoi le PID est different sur le terminal ?
+Envoyer un signal test pour verifier que c'est le bon pid
