@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 14:20:55 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/26 18:13:27 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,6 @@ void	setup_signals(void)
 	sigemptyset(&sa_int.sa_mask);
 	sa_int.sa_flags = 0;
 	sigaction(SIGINT, &sa_int, NULL);
-}
-
-void	process_signal(int signum)
-{
-	if (signum == SIGUSR1)
-		ft_printf("Received SIGUSR1 signal: %d\n", signum);
-	else if (signum == SIGUSR2)
-		ft_printf("Received SIGUSR2 signal: %d\n", signum);
-	else
-		ft_printf("Received unknown signal (SIGUSR1 SIGUSR2): %d\n", signum);
 }
 
 void	process_sigint(int signum)
