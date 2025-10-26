@@ -6,14 +6,13 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:01:41 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/22 19:38:20 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/26 13:56:38 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_H
 # define SERVER_H
 
-#define _POSIX_C_SOURCE 200809L
 # include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
@@ -22,7 +21,7 @@
 
 # include "../ft_printf/ft_printf.h"
 
-void	setup_signals();
+void	setup_signals(void);
 void	process_signal(int signum);
 void	process_sigint(int signum);
 

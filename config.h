@@ -1,14 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   signal.c                                           :+:      :+:    :+:   */
+/*   config.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 16:12:44 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 14:21:30 by smedenec         ###   ########.fr       */
+/*   Created: 2025/10/26 13:56:00 by smedenec          #+#    #+#             */
+/*   Updated: 2025/10/26 13:56:02 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../config.h"
-#include "server.h"
+#ifndef CONFIG_H
+# define CONFIG_H
+
+# define _POSIX_C_SOURCE 200809L
+# define _XOPEN_SOURCE 700
+
+#endif
