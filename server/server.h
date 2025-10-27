@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:01:41 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 20:53:11 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:05:58 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@
 
 void	setup_signals(void);
 void	process_signal(int signum);
-void	process_sigint(int signum);
 void	free_array(char **array);
+void	print_array(char **array);
 char	*create_array(char **array, int signum);
-void	exit_server(char **array);
+void	exit_server(char **array, int *spot, char *c);
 char	*ft_realloc(char *ptr, int new_size);
 int		ft_strlen(const char *str);
+void	reset_static(int *spot, char *c);
 
 #endif

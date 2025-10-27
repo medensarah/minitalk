@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 15:39:25 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/27 19:20:57 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ int	main(int argc, char **argv)
 	pid = 0;
 	i = 0;
 	signum = 0;
-	ft_printf("Client\n");
 	if ((argc == 3) && argv && argv[1] && argv[2])
 	{
-		ft_printf("ohh");
 		pid = ft_atoi(argv[1]);
 		if (!pid)
 			return (1);
-		ft_printf("PID = %d\nSTR = %s\n", pid, argv[2]);
 		while (argv[2][i])
 			send_char(pid, argv[2][i++]);
 		send_char(pid, '\0');
