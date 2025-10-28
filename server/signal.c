@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:12:44 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/27 18:42:29 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:32:36 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	process_signal(int signum)
 	}
 }
 
-char	*create_array(char **array, int	signum)
+char	*create_array(char **array, int signum)
 {
 	static int	spot;
 	static char	c;
