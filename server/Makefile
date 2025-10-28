@@ -1,6 +1,6 @@
 NAME = server
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -std=c99 -D_POSIX_C_SOURCE=200809L
+CFLAGS = -Wall -Wextra -Werror
 
 OBJDIR = objects
 PRINTF_DIR = ../ft_printf

@@ -6,13 +6,12 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/27 19:20:57 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:44:18 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../config.h"
 #include "client.h"
-#include <time.h>
 
 int	main(int argc, char **argv)
 {

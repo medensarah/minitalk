@@ -1,6 +1,6 @@
 NAME = client
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -std=c99 -D_POSIX_C_SOURCE=200809L
+CFLAGS = -Wall -Wextra -Werror -D _DEFAULT_SOURCE
 
 OBJDIR = objects
 PRINTF_DIR = ../ft_printf

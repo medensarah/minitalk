@@ -6,13 +6,12 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:14:55 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/27 19:24:22 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:56:39 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../config.h"
 #include "client.h"
-#include <time.h>
 
 int	send_signal(int pid, int signum)
 {
@@ -37,9 +36,6 @@ void	send_char(int pid, char c)
 		else
 			send_signal(pid, SIGUSR2);
 		i--;
-		struct timespec	ts;
-		ts.tv_sec = 0;
-		ts.tv_nsec = 500000; // 500 µs
-		nanosleep(&ts, NULL);
+		usleep(400);
 	}
 }

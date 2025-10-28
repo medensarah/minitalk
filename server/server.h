@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:01:41 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/27 19:05:58 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:46:16 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <signal.h>
 # include <unistd.h>
 
+# include "../config.h"
 # include "../ft_printf/ft_printf.h"
 
 void	setup_signals(void);

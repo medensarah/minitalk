@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:07:00 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/26 15:30:38 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:47:04 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <signal.h>
 # include <unistd.h>
 
+# include "../config.h"
 # include "../ft_printf/ft_printf.h"
 
 int		send_signal(int pid, int signum);
