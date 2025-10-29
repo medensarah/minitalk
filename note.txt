@@ -1,1 +1,0 @@
-Pourquoi le PID est different sur le terminal ?
