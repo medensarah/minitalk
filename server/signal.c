@@ -6,17 +6,18 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:12:44 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/28 17:32:36 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:41:14 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../config.h"
 #include "server.h"
 
-void	process_signal(int signum)
+void	process_signal(int signum, siginfo_t *info, void *context)
 {
 	static char	*array;
 
+	(void)context;
 	if (!array)
 	{
 		array = malloc(sizeof(char) * 1);
@@ -26,13 +27,13 @@ void	process_signal(int signum)
 	}
 	if (signum == SIGUSR1 || signum == SIGUSR2)
 	{
-		array = create_array(&array, signum);
+		array = create_array(&array, signum, info);
 		if (!array)
 			exit_server(&array, 0, 0);
 	}
 }
 
-char	*create_array(char **array, int signum)
+char	*create_array(char **array, int signum, siginfo_t *info)
 {
 	static int	spot;
 	static char	c;
@@ -58,6 +59,5 @@ char	*create_array(char **array, int signum)
 			exit_server(array, &spot, &c);
 		c = 0;
 	}
-	return (*array);
+	return (kill(info->si_pid, SIGUSR1), *array);
 }
-//ft_printf("Received SIGUSR1 signal: %d\n", signum);

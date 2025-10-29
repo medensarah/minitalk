@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:07:00 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/28 15:47:04 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:15:02 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@
 int		send_signal(int pid, int signum);
 int		ft_atoi(const char *str);
 void	send_char(int pid, char c);
+void	assign_gobal(int signum);
+void	setup_signals(void);
 
 #endif

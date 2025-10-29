@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/27 18:04:45 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:12:03 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	setup_signals(void)
 {
 	struct sigaction	sa_usr;
 
-	sa_usr.sa_handler = process_signal;
+	sa_usr.sa_sigaction = process_signal;
 	sigemptyset(&sa_usr.sa_mask);
-	sa_usr.sa_flags = SA_RESTART;
+	sa_usr.sa_flags = SA_RESTART | SA_SIGINFO;
 	sigaction(SIGUSR1, &sa_usr, NULL);
 	sigaction(SIGUSR2, &sa_usr, NULL);
 }

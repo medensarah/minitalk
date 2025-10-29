@@ -6,12 +6,23 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:14:55 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/28 14:56:39 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:40:06 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../config.h"
 #include "client.h"
+
+volatile int	g_global = 0;
+
+void	assign_gobal(int signum)
+{
+	if (signum == SIGUSR1)
+	{
+		(void)signum;
+		g_global = 1;
+	}
+}
 
 int	send_signal(int pid, int signum)
 {
@@ -36,6 +47,8 @@ void	send_char(int pid, char c)
 		else
 			send_signal(pid, SIGUSR2);
 		i--;
-		usleep(400);
+		while (!g_global)
+			pause();
+		g_global = 0;
 	}
 }
