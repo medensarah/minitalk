@@ -6,7 +6,7 @@
 /*   By: smedenec <smedenec@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:09:37 by smedenec          #+#    #+#             */
-/*   Updated: 2025/10/29 16:06:54 by smedenec         ###   ########.fr       */
+/*   Updated: 2025/10/31 14:19:22 by smedenec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ int	main(int argc, char **argv)
 	signum = 0;
 	if ((argc == 3) && argv && argv[1] && argv[2])
 	{
-		setup_signals();
 		pid = ft_atoi(argv[1]);
 		if (!pid)
 			return (1);
+		if (kill(pid, 0) == -1)
+			exit (1);
+		setup_signals();
 		while (argv[2][i])
 			send_char(pid, argv[2][i++]);
 		send_char(pid, '\0');
